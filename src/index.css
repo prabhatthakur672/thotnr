@@ -1,0 +1,58 @@
+@import "tailwindcss";
+
+/* ─────────────────────────────────────────────────────────────────────────────
+   Design tokens — single source of truth for the entire project.
+   Tailwind generates utility classes from every --color-* entry:
+     --color-navy        →  bg-navy   text-navy   border-navy   from-navy  …
+     --color-sky         →  bg-sky    text-sky    border-sky    from-sky   …
+   Opacity modifiers work automatically:  bg-sky/20  text-navy/50  …
+───────────────────────────────────────────────────────────────────────────── */
+@theme {
+  /* Navy backgrounds */
+  --color-navy:       #010716;
+  --color-navy-lt:    #0a1628;
+  --color-navy-card:  #0d1b2e;
+  --color-navy-edge:  #1e293b;
+
+  /* Brand accents */
+  --color-sky:        #0EA5E9;
+  --color-sky-dk:     #0284C7;
+  --color-indigo:     #6366F1;
+
+  /* Text */
+  --color-muted:      #94A3B8;
+  --color-muted-dk:   #475569;
+  --color-ink:        #1E293B;
+  --color-ink-soft:   #334155;
+
+  /* Borders (light sections) */
+  --color-line:       #E2E8F0;
+
+  /* Fonts */
+  --font-sans:        'DM Sans', system-ui, sans-serif;
+  --font-heading:     'Space Grotesk', system-ui, sans-serif;
+}
+
+/* ── Global resets ────────────────────────────────────────────────────────── */
+*, *::before, *::after { box-sizing: border-box; }
+
+html {
+  margin: 0; padding: 0;
+  scroll-behavior: smooth;
+  overflow-x: hidden;
+}
+
+body {
+  margin: 0; padding: 0;
+  overflow-x: hidden;
+  font-family: var(--font-sans);
+  background: #fff;
+  color: #1e293b;
+}
+
+#root {
+  width: 100%;
+  min-height: 100vh;
+  margin: 0; padding: 0;
+  overflow-x: hidden;
+}
